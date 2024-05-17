@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Volunteer Opportunities</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Volunteer Opportunities</h1>
+    </header>
+    <div class="container">
+        <form action="{{ url_for('chance') }}" method="post">
+            <input type="text" name="search" placeholder="Search opportunities..." required>
+            <button type="submit">Search</button>
+        </form>
+        <ul>
+            {% for opportunity in opportunities %}
+                <li class="card">
+                    <h2><a href="{{ url_for('opportunity_detail', opportunity_id=opportunity[0]) }}">{{ opportunity[1] }}</a></h2>
+                    <p>{{ opportunity[2] }}</p>
+                    <p><strong>Skills Required:</strong> {{ opportunity[3] }}</p>
+                    <p><strong>Time Commitment:</strong> {{ opportunity[4] }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+        <a href="{{ url_for('lead') }}">Back to Home</a>
+    </div>
+    <footer>
+        <p>Community Volunteer Matching Platform © 2024</p>
+    </footer>
+</body>
+</html>

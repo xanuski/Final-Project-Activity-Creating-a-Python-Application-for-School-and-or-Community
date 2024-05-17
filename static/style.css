@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    background-image: url(/static/background.jpg)
+}
+
+header {
+    background-color: #ec6dac6c;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    background-image: url(/static/xander.jpg)
+    background-image:linear-gradient(180deg, #eb85cc7c, #f3339394);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, 
+}
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.8);
+    overflow: hidden;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.navbar a {
+    float: none;
+    display: inline-block;
+    color: #e479af;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.navbar a:hover {
+    background-color: #ffcc00;
+    color: white;
+}
+
+.background-image-container {
+    background-image: url('{{ url_for('static', filename='background.jpg') }}');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    padding: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #e769a8a9;
+    color: white;
+    padding: 14px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #e769a8a9;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li.card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+li.card h2 a {
+    text-decoration: none;
+    color: #e479af;
+}
+
+li.card h2 a:hover {
+    color: #e479af;
+}
+
+footer {
+    background-color: #e479af93;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-image: url(/static/xander.jpg)
+    background-image:linear-gradient(180deg, #eb85cc7c,#ec5ba494);
+}

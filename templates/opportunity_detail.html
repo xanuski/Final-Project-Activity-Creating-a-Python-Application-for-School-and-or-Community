@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ opportunity[1] }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>{{ opportunity[1] }}</h1>
+    </header>
+    <div class="container">
+        <div class="card">
+            <h2>Description</h2>
+            <p>{{ opportunity[2] }}</p>
+            <h2>Skills Required</h2>
+            <p>{{ opportunity[3] }}</p>
+            <h2>Time Commitment</h2>
+            <p>{{ opportunity[4] }}</p>
+        </div>
+        <a href="{{ url_for('chance') }}">Back to Opportunities</a>
+    </div>
+    <footer>
+        <p>Community Volunteer Matching Platform © 2024</p>
+    </footer>
+</body>
+</html>
